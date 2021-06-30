@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saranghae/pages/login/login_page.dart';
+import 'package:saranghae/pages/login/login_register.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFf8f8ff),
       ),
-      home: LogInPage(),
+      initialRoute: 'login',
+      routes: {
+        'login': (context) => LogInPage(),
+        'profileRegister': (context) => LoginProfileRegister(),
+      },
+      // home: LogInPage(),
     );
   }
 }
