@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saranghae/pages/login/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Saranghae',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xFFf8f8ff),
       ),
-      home: Text("Fucking asshole!"),
+      home: LogInPage(),
     );
   }
 }
