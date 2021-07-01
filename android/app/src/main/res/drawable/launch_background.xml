@@ -9,4 +9,9 @@
             android:gravity="center"
             android:src="@mipmap/launch_image" />
     </item> -->
+    <!-- <pl.droidsonroids.gif.GifTextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launch_image"
+    /> -->
 </layer-list>

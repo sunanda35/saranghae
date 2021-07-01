@@ -120,7 +120,10 @@ class LogInPage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, 'profileRegister');
+                          Navigator.pushNamed(
+                            context,
+                            'profileRegister',
+                          );
                           // print('+91${_phoneController.text}');
                         },
                         child: signInBox(
