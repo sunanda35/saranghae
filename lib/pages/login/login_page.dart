@@ -135,14 +135,10 @@ class LogInPage extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      InkWell(
-                        onTap: () =>
-                            Navigator.pushNamed(context, 'profilePage'),
-                        child: signInBox(
-                          context,
-                          FontAwesomeIcons.google,
-                          "Continue with GOOGLE",
-                        ),
+                      signInBox(
+                        context,
+                        FontAwesomeIcons.google,
+                        "Continue with GOOGLE",
                       ),
                       SizedBox(
                         height: 10,
