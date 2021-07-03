@@ -48,7 +48,7 @@ class LogInPage extends StatelessWidget {
                       ),
                       Center(
                         child: Text(
-                          'Saranghae',
+                          kAPP_NAME,
                           style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.bold,
