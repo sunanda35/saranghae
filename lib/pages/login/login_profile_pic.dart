@@ -16,7 +16,9 @@ class _LoginProfilePhotoState extends State<LoginProfilePhoto> {
         title: Text(kAPP_NAME),
       ),
       body: Center(
-        child: Text("Fucker! Profile photo will show here. bitch!"),
+        child: Container(
+          child: Text("Fucking fucker assholes"),
+        ),
       ),
     );
   }
