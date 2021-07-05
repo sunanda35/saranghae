@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         'profilePage': (context) => ProfilePage(),
         'chatPage': (context) => ChatScreen(),
       },
-      // home: LogInPage(),
+      // home: LogInPage(),sldkjfj
     );
   }
 }
