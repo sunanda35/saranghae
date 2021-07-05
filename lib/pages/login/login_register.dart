@@ -28,27 +28,71 @@ class _LoginProfileRegisterState extends State<LoginProfileRegister> {
     Colors.pink,
     Colors.black,
     Colors.yellow,
-    Colors.amber
+    Colors.teal,
+    Colors.green,
+    Colors.blue,
+    Colors.pink,
+    Colors.black,
+    Colors.yellow,
+    Colors.teal,
+    Colors.green,
+    Colors.blue,
+    Colors.pink,
+    Colors.black,
+    Colors.yellow,
+    Colors.amber,
+    Colors.green,
+    Colors.blue,
+    Colors.pink,
+    Colors.black,
+    Colors.yellow,
+    Colors.teal,
+    Colors.green,
+    Colors.blue,
+    Colors.pink,
+    Colors.black,
+    Colors.yellow,
+    Colors.amber,
   ];
   List<Map> hobbies = [
     {
-      "hobby": "Travelling",
-      "isChecked": true,
-    },
-    {
-      "hobby": "Swimming",
+      "hobby": "🛩Travelling",
       "isChecked": false,
     },
     {
-      "hobby": "Dancing",
+      "hobby": "🏋️‍♂️Exercise",
       "isChecked": false,
     },
     {
-      "hobby": "Coocking",
+      "hobby": "🍿Going to Theater",
       "isChecked": false,
     },
     {
-      "hobby": "Photography",
+      "hobby": "💃Dancing",
+      "isChecked": false,
+    },
+    {
+      "hobby": "👩‍🍳Cooking",
+      "isChecked": false,
+    },
+    {
+      "hobby": "📸Photography",
+      "isChecked": false,
+    },
+    {
+      "hobby": "🗳️Politics",
+      "isChecked": false,
+    },
+    {
+      "hobby": "👨‍🎓Learning",
+      "isChecked": false,
+    },
+    {
+      "hobby": "🎸Music",
+      "isChecked": false,
+    },
+    {
+      "hobby": "🏍Bike Racing",
       "isChecked": false,
     }
   ];
@@ -334,7 +378,7 @@ class _LoginProfileRegisterState extends State<LoginProfileRegister> {
                     Container(
                       padding: EdgeInsets.only(left: 6, right: 6),
                       decoration: BoxDecoration(
-                        color: Colors.black12,
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Wrap(

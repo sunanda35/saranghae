@@ -15,23 +15,25 @@ class PassionChoice extends StatelessWidget {
     return ChoiceChip(
       label: Text(hobby),
       labelStyle: TextStyle(
-        color: selected ? color : Colors.black45,
+        color: selected ? Colors.white : color,
         fontSize: 15,
         fontWeight: FontWeight.bold,
       ),
       side: BorderSide(
-        color: selected ? color : Colors.transparent,
+        color: selected ? Colors.transparent : color,
         width: 1,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30),
       ),
       selectedShadowColor: color,
-      backgroundColor: selected ? color : Colors.grey[200],
+      selectedColor: color,
+      backgroundColor: Colors.transparent,
       pressElevation: 30.0,
       selected: selected,
       onSelected: (value) {
         onPassionChanged(value);
+        print(value);
       },
     );
   }
