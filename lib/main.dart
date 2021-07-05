@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFf8f8ff),
       ),
-      initialRoute: 'profilePhotoRegister', //sunanda
+      initialRoute: 'profileRegister', //sunanda
       // initialRoute: 'profilePage', //shubankar
       routes: {
         'login': (context) => LogInPage(),

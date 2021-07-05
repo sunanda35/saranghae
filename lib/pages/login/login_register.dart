@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:saranghae/reusable/passion_data.dart';
+import 'dart:core';
 
 class LoginProfileRegister extends StatefulWidget {
   const LoginProfileRegister({Key? key}) : super(key: key);
@@ -20,17 +21,43 @@ class _LoginProfileRegisterState extends State<LoginProfileRegister> {
   final _schoolController = TextEditingController();
   final _locationController = TextEditingController();
   Gender? sex = Gender.none;
-  // List<dynamic> sexOriantation = [];
 
-  // Map<String, bool> hobbies = {
-  //   'One': false,
-  //   'Two': false,
-  //   'Three': false,
-  //   'Four': false,
-  //   'Five': false,
-  //   'Six': false,
-  //   'Seven': false,
-  // };
+  List<Color> alternativeColor = [
+    Colors.green,
+    Colors.blue,
+    Colors.pink,
+    Colors.black,
+    Colors.yellow,
+    Colors.amber
+  ];
+  List<Map> hobbies = [
+    {
+      "hobby": "Travelling",
+      "isChecked": true,
+    },
+    {
+      "hobby": "Swimming",
+      "isChecked": false,
+    },
+    {
+      "hobby": "Dancing",
+      "isChecked": false,
+    },
+    {
+      "hobby": "Coocking",
+      "isChecked": false,
+    },
+    {
+      "hobby": "Photography",
+      "isChecked": false,
+    }
+  ];
+
+  void pUpdate(value, index) {
+    setState(() {
+      hobbies[index]['isChecked'] = value;
+    });
+  }
 
   @override
   void dispose() {
@@ -292,6 +319,33 @@ class _LoginProfileRegisterState extends State<LoginProfileRegister> {
                           border: InputBorder.none,
                           hintText: "Company",
                         ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Passion:",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 6, right: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.black12,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Wrap(
+                        direction: Axis.horizontal,
+                        alignment: WrapAlignment.spaceEvenly,
+                        children: hobbies
+                            .map((e) => PassionChoice(Key(e['hobby']), (val) {
+                                  pUpdate(val, hobbies.indexOf(e));
+                                }, e['isChecked'], e['hobby'],
+                                    alternativeColor[hobbies.indexOf(e)]))
+                            .toList(),
                       ),
                     ),
                     SizedBox(
