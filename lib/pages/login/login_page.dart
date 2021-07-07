@@ -48,7 +48,7 @@ class LogInPage extends StatelessWidget {
                       ),
                       Center(
                         child: Text(
-                          'Saranghae',
+                          kAPP_NAME,
                           style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.bold,
@@ -120,7 +120,10 @@ class LogInPage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, 'profileRegister');
+                          Navigator.pushNamed(
+                            context,
+                            'profileRegister',
+                          );
                           // print('+91${_phoneController.text}');
                         },
                         child: signInBox(
