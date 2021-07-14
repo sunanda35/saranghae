@@ -1,12 +1,3 @@
-#For Developing purpuse we need to get rid of tree flow.
-#Make initial route change which page you are working and that's why main.dart file not pushing everytime
-/lib/main.dart
-# Only for development perpose
-
-
-
-
-
 # Miscellaneous
 *.class
 *.log
