@@ -12,7 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Stack(
         children: [
           Container(
-            height: 465.0,
+            height: 641.0,
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.all(15.0),
             decoration: BoxDecoration(
@@ -24,8 +24,8 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
           DraggableScrollableSheet(
-            initialChildSize: 0.4,
-            minChildSize: 0.4,
+            initialChildSize: 0.2,
+            minChildSize: 0.2,
             maxChildSize: 0.7,
             builder: (context, controller) => ClipRRect(
               borderRadius: BorderRadius.vertical(
@@ -35,7 +35,21 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Color(0xFFf8f8ff),
                 child: ListView(
                   controller: controller,
-                  children: [],
+                  children: [
+                    SafeArea(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Your Name!!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF171717),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
