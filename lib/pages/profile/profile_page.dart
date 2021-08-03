@@ -23,8 +23,15 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
           ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+            ),
+            child: Text('Edit'),
+            onPressed: null,
+          ),
           DraggableScrollableSheet(
-            initialChildSize: 0.2,
+            initialChildSize: 0.3,
             minChildSize: 0.2,
             maxChildSize: 0.7,
             builder: (context, controller) => ClipRRect(
@@ -36,16 +43,19 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: ListView(
                   controller: controller,
                   children: [
+                    Icon(
+                      Icons.horizontal_rule_rounded,
+                      color: Colors.black38,
+                      size: 50.0,
+                    ),
                     SafeArea(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Your Name!!',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF171717),
-                          ),
+                      child: Text(
+                        'Your Name!!'.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF171717),
                         ),
                       ),
                     ),
