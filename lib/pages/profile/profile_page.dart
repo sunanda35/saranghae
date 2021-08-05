@@ -23,12 +23,39 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.white,
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              margin: EdgeInsets.all(
+                20.0,
+              ),
+              width: 70.0,
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.camera_alt,
+                    ),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    Text(
+                      'Edit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50.0),
+              ),
             ),
-            child: Text('Edit'),
-            onPressed: null,
           ),
           DraggableScrollableSheet(
             initialChildSize: 0.3,
