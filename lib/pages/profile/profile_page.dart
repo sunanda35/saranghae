@@ -12,7 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Stack(
         children: [
           Container(
-            height: 465.0,
+            height: 641.0,
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.all(15.0),
             decoration: BoxDecoration(
@@ -23,9 +23,43 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              margin: EdgeInsets.all(
+                20.0,
+              ),
+              width: 70.0,
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.camera_alt,
+                    ),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    Text(
+                      'Edit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+            ),
+          ),
           DraggableScrollableSheet(
-            initialChildSize: 0.4,
-            minChildSize: 0.4,
+            initialChildSize: 0.3,
+            minChildSize: 0.2,
             maxChildSize: 0.7,
             builder: (context, controller) => ClipRRect(
               borderRadius: BorderRadius.vertical(
@@ -35,7 +69,24 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Color(0xFFf8f8ff),
                 child: ListView(
                   controller: controller,
-                  children: [],
+                  children: [
+                    Icon(
+                      Icons.horizontal_rule_rounded,
+                      color: Colors.black38,
+                      size: 50.0,
+                    ),
+                    SafeArea(
+                      child: Text(
+                        'Your Name!!'.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF171717),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

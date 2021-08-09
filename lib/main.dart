@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFf8f8ff),
       ),
-      initialRoute: 'auth',
+      initialRoute: 'profilePage',
       routes: {
         'auth': (context) =>
             Authentication(), // tried new position settings in flutter(ADVANCE CONCEPT)
